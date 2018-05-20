@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-model="message.value">
+    {{message.value}}
+    <div>{{message.value}}</div>
+    <ul>
+      <li>{{message.value}}</li>
+    </ul>
+  </div>
+  <script src="./watcher.js"></script>
+  <script src="./observer.js"></script>
+  <script src="./compile.js"></script>
+  <script src="./MVVM.js"></script>
+  <script>
+    let vm = new MVVM({
+      el: '#app',
+      data: {
+        message: {
+          value: 'hello hs'
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
